@@ -91,8 +91,6 @@ fi
 
 echo "Shipped artifact ID is: $ARTIFACT_ID"
 
-echo "::set-output name=artifact-id::$ARTIFACT_ID"
-
 if [[ "$PLUGIN_WAIT" == "true" || "$PLUGIN_DEPLOY" == "true" ]]; then
     gimlet artifact track --wait --timeout $PLUGIN_TIMEOUT $ARTIFACT_ID
 else
