@@ -23,7 +23,6 @@ SHA=$CI_COMMIT_SHA
 URL=$CI_COMMIT_LINK
 
 if [[ "$CI_BUILD_EVENT" == "pull_request" ]]; then
-then
     EVENT="pr"
     SHA=$CI_COMMIT_SHA
     SOURCE_BRANCH=$CI_COMMIT_SOURCE_BRANCH
