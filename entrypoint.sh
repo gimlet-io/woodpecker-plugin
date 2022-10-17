@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-set -e
+if [[ "$PLUGIN_DEBUG" == "true" ]]; then
+    set -eo xtrace
+else
+    set -e
+fi
 
 pwd
 
