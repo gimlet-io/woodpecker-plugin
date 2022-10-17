@@ -66,7 +66,7 @@ do
 done
 
 echo "Attaching environment variable context.."
-VARS=$(printenv | grep CI | grep -v '=$' | awk '$0="--var "$0')
+VARS=$(printenv | grep CI_ | grep -v '=$' | awk '$0="--var "$0')
 gimlet artifact add -f artifact.json $VARS
 
 echo "Attaching common Gimlet variables.."
